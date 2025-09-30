@@ -1,0 +1,139 @@
+:host {
+  --color-border: #e5e7eb;
+  --color-google-bg: #4285f4;
+  --color-google-bg-hover: #357ae8;
+
+  font-family: 'Inter', sans-serif;
+  color: var(--color-text-dark);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.signup-card {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  max-width: 28rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.signup-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  font-family: Arimo;
+  color: var(--color-text-dark);
+  margin-bottom: 2rem;
+}
+
+#error_message {
+  font-size: 12px;
+  margin-top: 3px;
+  color: var(--error-red);
+}
+
+.name-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.name-group .form-group {
+    flex: 1;
+}
+
+.cta-button {
+  border-radius: 0%;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cta-primary {
+    background-color: var(--color-primary);
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.cta-primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1.5rem 0;
+    color: var(--color-text-light);
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.separator:not(:empty)::before {
+    margin-right: 1em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: 1em;
+}
+
+.google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: var(--color-text-dark);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  padding: 0.75rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.google-button:hover {
+    background-color: #f3f4f6;
+}
+
+.google-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.75rem;
+}
+
+.signin-link {
+    display: block;
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+}
+
+.signin-link a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+}
+
+.signin-link a:hover {
+    color: var(--color-primary-hover);
+}
+
+/* Responsive adjustments for padding */
+@media (max-width: 640px) {
+    .signup-card {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,57 @@
+<main class="signup-card">
+    <h1 class="signup-title">Welcome to Merra</h1>
+
+    <!-- Sign Up Form -->
+    <form [formGroup]="signupForm" (ngSubmit)="handleSubmit()">
+      <div class="auth-form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" formControlName="email" placeholder="you@example.com" required>
+        @if (emailError() !== '') {
+          <p id="error_message">{{emailError()}}</p>
+        }
+      </div>
+        <div class="name-group">
+          <div class="auth-form-group">
+            <label for="fname">First name</label>
+            <input type="text" id="fname" name="fname" formControlName="fname" placeholder="Neil" required>
+            @if (firstNameError() !== '') {
+              <p id="error_message">{{firstNameError()}}</p>
+            }
+          </div>
+          <div class="auth-form-group">
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" name="lname" formControlName="lname" placeholder="Temblor" required>
+            @if (lastNameError() !== '') {
+              <p id="error_message">{{lastNameError()}}</p>
+            }
+          </div>
+        </div>
+        <div class="auth-form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" formControlName="password" required>
+            @if (passwordError() !== '') {
+              <p id="error_message">{{passwordError()}}</p>
+            }
+        </div>
+        <app-v-button label="Create Account" />
+    </form>
+
+    <div class="separator">or</div>
+
+    <!-- Google Sign Up Button -->
+    <a href="#" class="google-button">
+        <svg class="google-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.615 4.966-5.839 8.525-10.976 8.525-6.627 0-12-5.373-12-12s5.373-12 12-12c3.242 0 6.223 1.155 8.541 3.064l5.46-5.46C34.619 3.018 29.626 0 24 0 10.745 0 0 10.745 0 24s10.745 24 24 24c12.35 0 22.181-8.529 23.473-20.083z"/>
+            <path fill="#FF3D00" d="M6.306 14.691L4.823 10.231 0 11.196l1.306 4.965z"/>
+            <path fill="#00E676" d="M12.28 28.526l-.422.046c-2.324-1.993-3.822-4.783-4.102-7.893h7.228l-.512 2.628c-.524 2.695-.121 5.377 1.15 7.643z"/>
+            <path fill="#1976D2" d="M43.611 20.083H24v8h11.303c-1.615 4.966-5.839 8.525-10.976 8.525-6.627 0-12-5.373-12-12s5.373-12 12-12c3.242 0 6.223 1.155 8.541 3.064l5.46-5.46C34.619 3.018 29.626 0 24 0 10.745 0 0 10.745 0 24s10.745 24 24 24c12.35 0 22.181-8.529 23.473-20.083z"/>
+        </svg>
+        Continue with Google
+    </a>
+
+    <!-- Sign In Link -->
+    <p class="signin-link">
+        Already have an account? <a routerLink="/sign-in">Sign in</a>
+    </p>
+
+</main>

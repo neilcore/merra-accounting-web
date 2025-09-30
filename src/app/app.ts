@@ -9,4 +9,6 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('merra-web');
+  city: string = "Dumaguete City";
+  userName = signal('Neil brian depress');
 }

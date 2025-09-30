@@ -1,0 +1,92 @@
+.admin-container {
+  display: grid;
+  padding: 0%;
+  min-height: 100vh;
+  grid-template-rows: auto auto 1fr;
+}
+
+.admin-navbar {
+  background-image: linear-gradient(to left, #3674B5, #A4CCD9, #3674B5) !important;
+  padding: 10px 20px;
+  border-bottom: 5px solid #3674B5;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.admin-content-item {
+  padding: 20px;
+}
+
+.admin-navbar .logo {
+  font-size: 35px;
+  font-family: Arimo;
+  color: white;
+  text-decoration: none;
+}
+
+.admin-navbar .logo span {
+  font-size: 20px;
+  font-family: Montserrat;
+  font-weight: light;
+}
+
+.nav-links-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-links-container .nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links-container .nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links-container .nav-links a {
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links-container .nav-links a:hover {
+  text-decoration: underline;
+}
+
+.authenticated-nav {
+  background-color: #eaeef6;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.authenticated-nav p {
+  font-size: 14px;
+  color: #333;
+}
+
+.section-nav {
+  padding: 8px 20px;
+  background-color: #ced6e2;
+}
+.section-nav p {
+  font-size: 14px;
+  color: #555;
+}
+
+.section-nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.section-nav > div {
+  margin-right: 10px;
+}

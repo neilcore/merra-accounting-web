@@ -1,0 +1,46 @@
+:host {
+  font-family: 'Inter', sans-serif;
+  color: var(--color-text-dark);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.not-found-container {
+    max-width: 48rem;
+    padding: 2rem;
+}
+
+.not-found-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--orange-red);
+    margin-bottom: 1rem;
+}
+
+.not-found-message {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+}
+
+.illustration {
+    width: 100%;
+    max-width: 24rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .not-found-title {
+        font-size: 3rem;
+    }
+    .not-found-message {
+        font-size: 1.25rem;
+    }
+}
