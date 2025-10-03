@@ -1,0 +1,64 @@
+.retro-container {
+  /* Classic Windows/OS background grey */
+  background-color: #D1D1D1;
+  /* Outer bezel effect using solid borders for shadow/highlight */
+  border-top: 1px solid #FFFFFF; /* White highlight */
+  border-left: 1px solid #FFFFFF; /* White highlight */
+  border-bottom: 1px solid #7B7B7B; /* Dark shadow */
+  border-right: 1px solid #7B7B7B; /* Dark shadow */
+  padding: 1px; /* Padding to frame the inner select element */
+  width: 180px; /* Fixed example width */
+  position: relative;
+}
+
+/* 2. Select Element: The main content area */
+.retro-select {
+  /* Remove default browser styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Inner content area styling */
+  background-color: #FFFFFF; /* White or very light grey fill */
+  border: 1px solid #7B7B7B; /* Thin inner dark border */
+  color: #000000;
+  font-size: 14px;
+  height: 20px; /* Fixed height to match the image */
+  line-height: 20px;
+  padding: 0px 24px 0px 6px; /* Text padding, leaving space for the button overlay */
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding/border is inside the defined width/height */
+  cursor: pointer;
+}
+
+/* 3. Arrow Button: The custom-styled overlay for the dropdown button */
+.retro-arrow-button {
+  position: absolute;
+  top: 2px; /* Adjusted to align with the inner border of the select */
+  right: 2px;
+  width: 17px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: none; /* Crucial: Allows the click to pass through to the actual select element */
+
+  /* Inset/pressed button look */
+  background-color: #C0C0C0; /* Medium grey for the button area */
+  border-top: 1px solid #7B7B7B; /* Dark top/left inset shadow */
+  border-left: 1px solid #7B7B7B;
+  border-bottom: 1px solid #FFFFFF; /* White bottom/right inset highlight */
+  border-right: 1px solid #FFFFFF;
+}
+
+/* The SVG icon inside the button */
+.retro-arrow-button svg {
+  color: #000000;
+  stroke-width: 3; /* Making the chevron look bold */
+}
+
+/* Fix for focus ring showing outside the custom border on some browsers */
+.retro-select:focus {
+  outline: none;
+}

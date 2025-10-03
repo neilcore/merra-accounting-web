@@ -1,24 +1,25 @@
-.main-container {
-  width: 100%;
+.organization-container {
   display: flex;
-  flex-flow: row wrap;
+  align-items: center;
+  flex-direction: row;
   justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: aqua;
 }
 
-.main-menu {
-  float: left;
-  margin-right: 50px;
+.user-organization {
   width: 25%;
-  overflow: hidden;
-  background-color: antiquewhite;
+  margin-right: 10%;
 }
 
-.work-list {
-  float: left;
-  width: 50%;
-  overflow: hidden;
+.organization-details {
+  width: 60%;
 }
 
+.new-organization {
+  float: right !important;
+}
 .content {
   align-items: center;
   display: inline-flex;

@@ -1,0 +1,24 @@
+.custom-section-header {
+  background: linear-gradient(to bottom, #6E9CCF 0%, #3674B5 50%, #2A5A89 100%);
+  border-bottom: 1px solid #2A5A89; /* Darkened border to match new header */
+  padding: 4px 8px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #9ca6b3;
+}
+
+.custom-section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 18px;
+  background-color: var(--color-pale-ice);
+}
+
+.custom-section {
+  width: auto;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2) !important;
+}

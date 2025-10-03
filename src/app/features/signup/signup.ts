@@ -1,15 +1,18 @@
 import { Component, signal, WritableSignal } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule, MatIconRegistry} from '@angular/material/icon';
+import {DomSanitizer} from '@angular/platform-browser';
 import { RouterLink, Router } from '@angular/router';
 import {ReactiveFormsModule, FormControl, FormGroup, Validators } from '@angular/forms';
 import { inject } from "@angular/core";
 import { AuthService } from '../../service/auth/auth-service';
 // Update the import path to the correct location if needed
-import { VButton } from '../../shared/components/vanilla/v-button/v-button';
+import { VButton } from '../../shared/components/button/v-button/v-button';
+import { LCard } from '../../shared/components/card/lcard/lcard';
 
 @Component({
   selector: 'app-signup',
-  imports: [MatButtonModule, RouterLink, ReactiveFormsModule, VButton],
+  imports: [MatButtonModule, MatIconModule, RouterLink, ReactiveFormsModule, VButton, LCard],
   templateUrl: './signup.html',
   styleUrl: './signup.css'
 })
@@ -29,6 +32,12 @@ export class Signup {
     lname: new FormControl('', [Validators.required, Validators.minLength(2)]),
     password: new FormControl('', [Validators.required, Validators.minLength(5)]),
   });
+
+  constructor() {
+    const iconRegistry = inject(MatIconRegistry);
+    const sanitizer = inject(DomSanitizer);
+    iconRegistry.addSvgIconLiteral('google-icon', sanitizer.bypassSecurityTrustHtml(this.signupService.getGoogleToken()));
+  }
 
   handleSubmit() {
     this.emailError.set('');

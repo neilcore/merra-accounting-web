@@ -6,7 +6,7 @@
 }
 
 .admin-navbar {
-  background-image: linear-gradient(to left, #3674B5, #A4CCD9, #3674B5) !important;
+  background-image: linear-gradient(to right, #3674B5, #A4CCD9, #3674B5) !important;
   padding: 10px 20px;
   border-bottom: 5px solid #3674B5;
 }
@@ -62,7 +62,7 @@
 }
 
 .authenticated-nav {
-  background-color: #eaeef6;
+  background-color: var(--color-pale-ice);
   text-align: right;
   padding-right: 20px;
 }
@@ -73,7 +73,10 @@
 }
 
 .section-nav {
-  padding: 8px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 3px 20px;
   background-color: #ced6e2;
 }
 .section-nav p {

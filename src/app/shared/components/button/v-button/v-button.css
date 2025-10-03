@@ -4,4 +4,5 @@
   transition: background-color 0.3s ease-in-out;
   cursor: pointer;
   text-decoration: none;
+  background-image: linear-gradient(to right,#A4CCD9, #3674B5, #3674B5) !important;
 }

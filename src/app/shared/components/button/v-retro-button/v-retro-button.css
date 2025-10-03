@@ -1,0 +1,42 @@
+.retro-button {
+  /* Remove default button styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Outer 3D Bevel/Outset Look */
+  background-color: #D1D1D1; /* Base gray */
+  border-style: solid;
+  border-width: 1px;
+  border-color: #FFFFFF #7B7B7B #7B7B7B #FFFFFF; /* Top/Left White, Bottom/Right Dark Grey (Outset) */
+
+  /* Inner Appearance (Mimicking the light blue gradient) */
+  padding: 1px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #222222; /* Darker text */
+  cursor: pointer;
+
+  /* The subtle blue/white gradient and inner border */
+  position: relative;
+  text-shadow: 1px 1px 0 #fff; /* Slight white text shadow for definition */
+
+  /* Inner visual effect to mimic the image's shading */
+  box-shadow:
+      0 0 0 1px #000000, /* Outermost thin black line */
+      inset 0 1px 1px rgba(255, 255, 255, 0.5), /* Inner white highlight */
+      inset 0 -1px 1px rgba(0, 0, 0, 0.1); /* Inner bottom shadow */
+
+  /* Gradient effect */
+  background-image: linear-gradient(to bottom, #F0F0F0 0%, #E0E0E0 50%, #D1D1D1 100%);
+  /* Optional: if you want a subtle blue tint, use this instead: */
+  /* background-image: linear-gradient(to bottom, #E0F0FF 0%, #D0E8FF 50%, #BFE0FF 100%); */
+}
+
+.retro-button:active {
+  /* Inset look when clicked */
+  border-color: #7B7B7B #FFFFFF #FFFFFF #7B7B7B; /* Reverse the borders (Inset) */
+  box-shadow:
+      0 0 0 1px #000000,
+      inset 0 1px 1px rgba(0, 0, 0, 0.2); /* Deeper inner shadow */
+}

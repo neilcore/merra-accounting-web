@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { inject } from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
 import { Organizationservice } from '../../service/organization/organizationservice';
 import {ReactiveFormsModule, FormControl, Validators } from '@angular/forms';
+import { VButton } from '../../shared/components/button/v-button/v-button';
 
 @Component({
   selector: 'app-organization-select',
-  imports: [MatButtonModule, ReactiveFormsModule],
+  imports: [ReactiveFormsModule, VButton],
   templateUrl: './organization-select.html',
   styleUrl: './organization-select.css'
 })

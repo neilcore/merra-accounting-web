@@ -28,6 +28,8 @@
   --color-google-bg: #4285f4;
   --color-google-bg-hover: #357ae8;
 
+  --color-pale-ice: #eaeef6;
+
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

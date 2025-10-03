@@ -3,9 +3,11 @@ import { Landing } from './features/landing/landing';
 import { Signin } from './features/signin/signin';
 import { Signup } from './features/signup/signup';
 import {OrganizationSelect} from './features/organization-select/organization-select';
+import { Organization } from '../app/features/organization/organization';
 import {Admin} from './shared/components/admin/admin';
 import {Main} from './features/main/main';
 import {Dashboard} from './features/dashboard/dashboard';
+import {InvoiceView} from './features/invoice/invoice-view/invoice-view';
 import {Notfound} from './features/notfound/notfound';
 import { provideHttpClient, withInterceptors, withRequestsMadeViaParent } from '@angular/common/http';
 import {authInterceptor} from './shared/utils/interceptors/auth/auth-interceptor';
@@ -51,6 +53,16 @@ export const routes: Routes = [
         path: 'main',
         component: Main,
         title: 'Admin Main'
+      },
+      {
+        path: 'organization',
+        component: Organization,
+        title: 'Organization'
+      },
+      {
+        path: 'invoice',
+        component: InvoiceView,
+        title: 'Invoice'
       },
       {
         path: 'dashboard',

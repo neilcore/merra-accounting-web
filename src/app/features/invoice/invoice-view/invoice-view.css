@@ -1,0 +1,18 @@
+:host {
+  display: block;
+}
+
+.new-invoice {
+  float: right;
+  margin-bottom: 30px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.content .contents {
+  width: 60%;
+}
